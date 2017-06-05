@@ -318,6 +318,11 @@ main {
     display: block;
 }
 
+.formWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .profilePicImageWrapper {
     margin: 1rem;
     width: calc(100% - 2rem);
@@ -325,13 +330,18 @@ main {
     background: url("../images/profile-placeholder.png") no-repeat center center;
     background-size: cover;
     border-radius: 50%;
-    align-self: center; 
+    align-self: center;
+}
+
+.profilePicWrapper {
+    flex: 1 100%;
 }
 
 .nepcpWrapper {
     display: flex;
     flex-wrap: wrap;
     line-height: 2rem;
+    flex: 1 100%;
 }
 
 .nepcpWrapper > *{
@@ -349,6 +359,16 @@ main {
     width: 100%;
 }
 
+.surveyList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.surveyList > * {
+    flex: 1 100%;
+}
+
 .genreCheckboxWrapper label {
     display: inline-block;
 }
@@ -356,6 +376,7 @@ main {
 .survey_section textarea{
     width: 100%;
     height: 5rem;
+    max-width: 769px;
 }
 
 #submit_btn {
@@ -403,7 +424,19 @@ main {
 	flex: 1 0;
     }
 
+    .profilePicWrapper{
+        flex: 1 50%;
+    }
+
+    .nepcpWrapper {
+        flex: 1 50%;
+    }
+
+    .surveyList > * {
+        flex: 0 50%;
+    }
     
+
 }
 
 
@@ -427,5 +460,25 @@ main {
 
     .galleryItem {
 	flex: 1 50%;
+    }
+
+    .profilePicWrapper{
+        flex: 1 33%;
+    }
+
+    .nepcpWrapper {
+        flex: 1 66%;
+    }
+
+    .nepcpWrapper > * {
+        flex: 1 50%;
+    }
+
+    .neWrapper {
+        padding-right: 1em;
+    }
+
+    .surveyList > * {
+        flex: 0 33%;
     }
 }
